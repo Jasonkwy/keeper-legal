@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keeper Pet Safety Check-In - Privacy Policy & Terms</title>
+    <style>
+        :root {
+            --primary-color: #2d8a4e;
+            --secondary-color: #4aab6d;
+            --accent-color: #ff6b6b;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #333;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #2d8a4e 0%, #1a5c35 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            background: rgba(45, 138, 78, 0.1);
+        }
+
+        .tab.active {
+            background: white;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .tab-content {
+            padding: 40px;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+            font-size: 2rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+        }
+
+        h4 {
+            color: var(--dark-color);
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            background-color: #e8f5ee;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .warning {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .contact-info {
+            background-color: var(--light-color);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-top: 25px;
+            border: 1px solid #dee2e6;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid #e9ecef;
+        }
+
+        a {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .tab-content {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                border-radius: 0;
+                text-align: left;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐾 Keeper</h1>
+            <p>Pet Safety Check-In</p>
+        </header>
+
+        <div class="nav-tabs">
+            <button class="tab active" onclick="showTab('privacy', this)">Privacy Policy</button>
+            <button class="tab" onclick="showTab('terms', this)">Terms of Service</button>
+            <button class="tab" onclick="showTab('support', this)">Support</button>
+        </div>
+
+        <!-- PRIVACY POLICY -->
+        <div id="privacy" class="tab-content active">
+            <div class="card">
+                <h2>Privacy Policy</h2>
+                <p><strong>App:</strong> Keeper Pet Safety Check-In<br>
+                   <strong>Developer:</strong> Kwokwaiyip<br>
+                   <strong>Company:</strong> Stechbds<br>
+                   <strong>Effective date:</strong> 26 June 2026<br>
+                   <strong>Contact:</strong> <a href="mailto:info@stechbds.com">info@stechbds.com</a></p>
+
+                <h3>What We Collect</h3>
+
+                <div class="highlight">
+                    <h3>✅ We DO collect (only what's necessary):</h3>
+                    <ul>
+                        <li>Pet name (stored locally on your device)</li>
+                        <li>Guardian names, email addresses, and phone numbers (stored securely in Supabase, used only to send alerts)</li>
+                        <li>Check-in timestamps (stored locally on your device)</li>
+                        <li>Subscription status (managed by RevenueCat)</li>
+                    </ul>
+                </div>
+
+                <div class="warning">
+                    <h3>❌ We do NOT collect:</h3>
+                    <ul>
+                        <li>Your location</li>
+                        <li>Photos or media</li>
+                        <li>Usage analytics or advertising data</li>
+                        <li>Any data sold or shared with advertisers</li>
+                    </ul>
+                </div>
+
+                <h3>How We Use Your Information</h3>
+                <ul>
+                    <li>To send emergency email and SMS alerts to your designated guardians when a check-in window expires</li>
+                    <li>To manage your Pro subscription and restore purchases</li>
+                    <li>To maintain your check-in streak and habit history on your device</li>
+                </ul>
+
+                <h3>Third-Party Services</h3>
+                <ul>
+                    <li><strong>RevenueCat</strong> – subscription management (<a href="https://www.revenuecat.com/privacy">privacy policy</a>)</li>
+                    <li><strong>Supabase</strong> – secure backend storage and alert dispatch (<a href="https://supabase.com/privacy">privacy policy</a>)</li>
+                    <li><strong>Resend</strong> – email alert delivery (<a href="https://resend.com/legal/privacy-policy">privacy policy</a>)</li>
+                    <li><strong>Twilio</strong> – SMS alert delivery, available for Australian numbers only (<a href="https://www.twilio.com/en-us/legal/privacy">privacy policy</a>)</li>
+                </ul>
+
+                <h3>Data Retention</h3>
+                <p>Guardian contact data is stored securely in Supabase and used only to send alerts. You may remove guardians at any time within the App. Deleting the App removes all locally stored data.</p>
+
+                <h3>Children's Privacy</h3>
+                <p>Keeper is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+                <h3>Changes to This Policy</h3>
+                <p>We may update this policy from time to time. The effective date at the top of this page will reflect the most recent revision.</p>
+
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Questions about this Privacy Policy?</p>
+                    <p><strong>Email</strong>: <a href="mailto:info@stechbds.com">info@stechbds.com</a></p>
+                    <p><strong>Developer</strong>: Kwokwaiyip - Stechbds</p>
+                    <p>We aim to respond within 24–48 hours.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TERMS OF SERVICE -->
+        <div id="terms" class="tab-content">
+            <div class="card">
+                <h2>Terms of Service</h2>
+                <p><strong>Effective Date:</strong> 26 June 2026</p>
+
+                <h3>1. Acceptance of Terms</h3>
+                <p>By downloading or using Keeper Pet Safety Check-In ("the App"), you agree to these Terms of Service. If you do not agree, please do not use the App.</p>
+
+                <h3>2. Description of Service</h3>
+                <p>Keeper is a personal safety check-in app designed to help pet owners stay accountable. If you do not check in within your chosen time window, the App will send alerts to your designated guardians via email and/or SMS.</p>
+
+                <h3>3. SMS Alert Limitation</h3>
+                <p>SMS alerts are currently available for Australian mobile numbers only. Email alerts are available worldwide.</p>
+
+                <h3>4. No Guarantee of Delivery</h3>
+                <div class="warning">
+                    <p>Alert delivery depends on third-party services (email and SMS providers), network availability, and device settings. We do not guarantee that alerts will be delivered in all circumstances. <strong>Keeper should not be used as a sole means of emergency communication.</strong></p>
+                </div>
+
+                <h3>5. Subscriptions</h3>
+                <p>Keeper offers a free tier and a Pro subscription. Subscriptions are billed through the Apple App Store and managed by RevenueCat. Prices are displayed in the App before purchase. You may cancel your subscription at any time through your Apple ID settings. Refunds are subject to Apple's standard refund policy.</p>
+
+                <h3>6. Free Trial</h3>
+                <p>New users receive a 7-day free trial of Keeper Pro. After the trial period, you will revert to the free tier unless you subscribe.</p>
+
+                <h3>7. User Responsibilities</h3>
+                <ul>
+                    <li>You are responsible for ensuring that guardian contact details are accurate and up to date.</li>
+                    <li>You must obtain consent from your guardians before adding their contact information.</li>
+                    <li>You must not use the App for any unlawful purpose.</li>
+                </ul>
+
+                <h3>8. Intellectual Property</h3>
+                <p>All content, design, and code within Keeper is the property of Stechbds. You may not reproduce, distribute, or create derivative works without written permission.</p>
+
+                <h3>9. Limitation of Liability</h3>
+                <p>The App is provided "as is" without warranty of any kind. To the maximum extent permitted by law, Stechbds and Kwokwaiyip shall not be liable for any indirect, incidental, or consequential damages arising from your use of the App, including any failure to deliver alerts.</p>
+
+                <h3>10. Changes to These Terms</h3>
+                <p>We may update these Terms from time to time. Continued use of the App after changes constitutes your acceptance of the updated Terms.</p>
+
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Questions about these Terms?</p>
+                    <p><strong>Email</strong>: <a href="mailto:info@stechbds.com">info@stechbds.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUPPORT -->
+        <div id="support" class="tab-content">
+            <div class="card">
+                <h2>Support</h2>
+                <p>We're here to help you with any questions or issues you might have with Keeper.</p>
+
+                <h3>Frequently Asked Questions</h3>
+
+                <h4>How does Keeper work?</h4>
+                <p>You press "I'M SAFE" once a day to confirm you and your pet are okay. If you miss your check-in window, Keeper automatically sends an alert email (and SMS for Australian numbers) to your designated guardians.</p>
+
+                <h4>What happens if I miss a check-in?</h4>
+                <p>When your check-in window expires, Keeper sends an emergency alert to all your guardians. You will also receive warning notifications at 4 hours and 1 hour before your window closes.</p>
+
+                <h4>How do I add or remove a guardian?</h4>
+                <p>Tap "Guardians" on the main screen. You can add, edit, or remove guardian contacts at any time. Pro users can add up to 3 guardians; Free users can add 1.</p>
+
+                <h4>SMS alerts are not being received — why?</h4>
+                <p>SMS alerts are currently available for Australian mobile numbers only. If your guardian has a non-Australian number, they will still receive email alerts. International SMS support is planned for a future update.</p>
+
+                <h4>How do I change the check-in window length?</h4>
+                <p>Custom check-in window lengths (other than 24 hours) are a Pro feature. Tap "Settings" → "Check-In Window" to adjust. Upgrade to Pro to unlock this feature.</p>
+
+                <h4>How do I manage or cancel my subscription?</h4>
+                <p>Subscriptions are managed through your Apple ID. Go to iPhone Settings → [Your Name] → Subscriptions → Keeper to cancel or change your plan at any time.</p>
+
+                <h4>How do I restore my purchase on a new device?</h4>
+                <p>Open Keeper → Settings → tap "Restore Purchases". Make sure you are signed into the same Apple ID used for the original purchase.</p>
+
+                <h4>How do I delete my data?</h4>
+                <p>Deleting the App from your device removes all locally stored data (check-in history, streak, settings). Guardian contact data stored on our server can be deleted by contacting us at <a href="mailto:support@stechbds.com">support@stechbds.com</a>.</p>
+
+                <h4>I found a bug or have a feature request.</h4>
+                <p>We'd love to hear from you. Email us at <a href="mailto:support@stechbds.com">support@stechbds.com</a> with a description of the issue or idea. Screenshots are always helpful!</p>
+
+                <div class="contact-info">
+                    <h3>Contact Support</h3>
+                    <p>Still need help? Reach out to us directly.</p>
+                    <p><strong>Email</strong>: <a href="mailto:support@stechbds.com">support@stechbds.com</a></p>
+                    <p><strong>Developer</strong>: Kwokwaiyip - Stechbds</p>
+                    <p>We respond to all enquiries within 24–48 hours.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; <span id="currentYear"></span> 2026 by Kwokwaiyip - Stechbds. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function showTab(tabName, clickedTab) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+            clickedTab.classList.add('active');
+        }
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
